@@ -7,6 +7,45 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid Name="DataGridProductos" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <!-- Caja de texto para el buscador -->
+        <TextBox 
+            Name="searchTextBox" 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" 
+            Width="200" 
+            Margin="10" 
+         />
+
+
+        <!-- Botón para cargar usando DataTable -->
+        <Button 
+            Name="loadDataTableButton" 
+            Content="Cargar listado del punto 3" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="150" 
+            Margin="300,10,0,0" 
+            Click="LoadDataTableButton_Click"
+         />
+
+        <!-- Botón para cargar usando DataReader -->
+        <Button 
+            Name="loadDataReaderButton" 
+            Content="Cargar listado del punto 4" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="150" 
+            Margin="460,10,0,0" Click="loadDataReaderButton_Click" 
+          
+         />
+
+        <!-- Tabla de resultados -->
+        <DataGrid 
+            Name="showClients" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Top" 
+            Height="300" 
+            Margin="10,50,10,10"
+         />
     </Grid>
 </Window>
